@@ -32,7 +32,7 @@ namespace angry_birds
             inpathnul = "vvod.txt";
             TextWriter tw = new StreamWriter(inpathnul);
 
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < 6; i++)
             {
                 tw.WriteLine("0" + "\t");
             }
@@ -134,16 +134,16 @@ namespace angry_birds
             bf.CalculateXY();
             string outpath = "output.txt";
             bf.WriteData(outpath);
+            Grafic grafic = new Grafic(outpath);
             
-
-            Message_box bx = new Message_box("Тело летит");
+           // Message_box bx = new Message_box("Тело летит");
         }
         void ButtonOnClick_for_three(object sender, RoutedEventArgs args)
         {
             inpathnul = "vvod.txt";
             TextWriter tw = new StreamWriter(inpathnul);
 
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < 6; i++)
             {
                 tw.WriteLine("0" + "\t");
             }

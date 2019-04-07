@@ -49,7 +49,7 @@ namespace angry_birds
 
             grid1.Margin = new Thickness(5);
             stack.Children.Add(grid1);
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < 6; i++)
             {
 
                 RowDefinition rowdef = new RowDefinition();
@@ -73,7 +73,7 @@ namespace angry_birds
             grid1.ColumnDefinitions.Add(coldef);  
             TextBox txtbx;
             txtbox = new List<TextBox>();
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < 6; i++)
             {
                 txtbx = new TextBox();
                 txtbox.Add(txtbx);
@@ -84,7 +84,7 @@ namespace angry_birds
 
           
 
-            string[] strLabels = { "х0:", "у0:", "Начальная скорость:", "Угол (в градусах):", "Масса тела:", "Сопротивление воздуха", "Время полёта" };// задаётся массив строк
+            string[] strLabels = { "х0:", "у0:", "Начальная скорость:", "Угол (в градусах):", "Масса тела:", "Сопротивление воздуха" };// задаётся массив строк
             for (int i = 0; i < strLabels.Length; i++)
             {
                 lbl1 = new Label();
@@ -171,8 +171,7 @@ namespace angry_birds
                 (txtbox[3].Text.Length == 0) || (!double.TryParse(txtbox[3].Text, out z)) || (txtbox[4].Text.Length == 0) || (!double.TryParse(txtbox[4].Text, out z)) ||
                 (txtbox[5].Text.Length == 0) || (!double.TryParse(txtbox[5].Text, out z))
                 || (txtbox[0].Text.Length > 5) || (txtbox[1].Text.Length > 5) || (txtbox[2].Text.Length > 5) || (txtbox[3].Text.Length > 5) || (txtbox[4].Text.Length > 5)
-                || (txtbox[5].Text.Length > 5) || (txtbox[6].Text.Length == 0) || (!double.TryParse(txtbox[6].Text, out z))
-                || (txtbox[6].Text.Length > 5)
+                || (txtbox[5].Text.Length > 5) 
                 )
 
             {
@@ -196,7 +195,7 @@ namespace angry_birds
 
             TextWriter tw1 = new StreamWriter(inpath);
 
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < 6; i++)
             {
                 tw1.WriteLine(txtbox[i].Text + "\t");
             }
